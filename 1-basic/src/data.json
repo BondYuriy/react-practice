@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Vasya",
+    "imgUrl": "https://image.shutterstock.com/image-photo/handsome-unshaven-young-darkskinned-male-600w-640011838.jpg",
+    "age": "20"
+  },
+
+  {
+    "id": 2,
+    "name": "Petya",
+    "imgUrl": "https://image.shutterstock.com/image-photo/happy-bearded-african-businessman-using-260nw-562748479.jpg",
+    "age": "30"
+  },
+
+  {
+    "id": 3,
+    "name": "Yura",
+    "imgUrl": "https://image.shutterstock.com/image-photo/portrait-young-man-sitting-his-260nw-648506098.jpg",
+    "age": "40"
+  },
+
+  {
+    "id": 4,
+    "name": "Tanya",
+    "imgUrl": "https://image.shutterstock.com/image-photo/young-sad-woman-sitting-room-260nw-1023939529.jpg",
+    "age": "25"
+  }
+]
