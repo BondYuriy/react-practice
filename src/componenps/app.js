@@ -1,7 +1,30 @@
-import React from "react";
-import UserList from "./user-list";
-import users from "../data.json";
+import React, { Component } from "react";
+import Toggle from "./toggle";
+import Counter from "./counter";
+import CounterStep from "./counter-step";
 
-const App = () => <UserList users={users} />;
+export default class App extends Component {
+  state = {
+    step: 1
+  };
 
-export default App;
+  changeStep = newStep => {
+    this.setState({ step: newStep });
+  };
+
+  render() {
+    const { step } = this.state;
+
+    return (
+      <>
+        <h1>Counter</h1>
+        <span>Counter step</span>
+        <Toggle>
+          <CounterStep changeStep={this.changeStep} />
+        </Toggle>
+        <br />
+        <Counter step={step} />
+      </>
+    );
+  }
+}
