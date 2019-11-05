@@ -4,9 +4,20 @@ const INITIAL_STATE = {
   login: "",
   email: "",
   password: "",
-  gender: "null",
+  gender: null,
   age: "",
   agreed: false
+};
+
+const GENDER = {
+  male: "male",
+  female: "female"
+};
+
+const AGE = {
+  youth: "18-25",
+  middle: "25-40",
+  senior: "40+"
 };
 
 export default class Form extends Component {
@@ -83,7 +94,7 @@ export default class Form extends Component {
               type="radio"
               name="gender"
               value="male"
-              checked={gender === "male"}
+              checked={gender === GENDER.male}
               onChange={this.handleChange}
             />
           </span>
@@ -93,7 +104,7 @@ export default class Form extends Component {
               type="radio"
               name="gender"
               value="female"
-              checked={gender === "female"}
+              checked={gender === GENDER.female}
               onChange={this.handleChange}
             />
           </span>
@@ -104,9 +115,9 @@ export default class Form extends Component {
             <option value="" disabled>
               ...
             </option>
-            <option value="18-25">18-25</option>
-            <option value="25-35">25-35</option>
-            <option value="35+">35+</option>
+            <option value={AGE.youth}>{AGE.youth}</option>
+            <option value={AGE.middle}>{AGE.middle}</option>
+            <option value={AGE.senior}>{AGE.senior}</option>
           </select>
         </div>
         <div className="form-group">
