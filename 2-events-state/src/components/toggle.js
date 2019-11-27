@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 export default class Toggle extends Component {
   state = {
-    on: false
+    on: false,
   };
 
   toggle = () => {
@@ -15,7 +15,9 @@ export default class Toggle extends Component {
 
     return (
       <div>
-        <button onClick={this.toggle}>{on ? "Hide" : "Show"}</button>
+        <button type="button" onClick={this.toggle}>
+          {on ? 'Hide' : 'Show'}
+        </button>
         {on && children}
       </div>
     );

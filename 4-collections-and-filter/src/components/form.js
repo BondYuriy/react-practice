@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 const INITIAL_STATE = {
-  text: ""
+  text: '',
 };
 
 export default class Form extends Component {
@@ -29,14 +29,18 @@ export default class Form extends Component {
 
     return (
       <form onSubmit={this.handleSudmit}>
-        <label>Enter text: </label>
-        <input
-          type="text"
-          name="text"
-          value={text}
-          onChange={this.handleChange}
-        />
-        <button>add note</button>
+        <label htmlFor="userInputNde">
+          Enter text:
+          <input
+            id="userInputNde"
+            type="text"
+            name="text"
+            value={text}
+            onChange={this.handleChange}
+          />
+        </label>
+
+        <button type="button">add note</button>
       </form>
     );
   }

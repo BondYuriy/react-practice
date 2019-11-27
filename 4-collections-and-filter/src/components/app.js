@@ -1,25 +1,25 @@
-import React, { Component } from "react";
-import Form from "./form";
-import Collection from "./collection";
-import v4 from "uuid/v4";
-import FilterNotes from "./filterNotes";
-import filters from "../service/filter";
+import React, { Component } from 'react';
+import v4 from 'uuid/v4';
+import Form from './form';
+import Collection from './collection';
+import FilterNotes from './filterNotes';
+import filters from '../service/filter';
 
 export default class App extends Component {
   state = {
     notes: [],
-    filter: ""
+    filter: '',
   };
 
   handleAddNote = text => {
     this.setState(prevState => ({
-      notes: [{ id: v4(), text }, ...prevState.notes]
+      notes: [{ id: v4(), text }, ...prevState.notes],
     }));
   };
 
   handleDeleteNote = id => {
     this.setState(prevState => ({
-      notes: prevState.notes.filter(note => note.id !== id)
+      notes: prevState.notes.filter(note => note.id !== id),
     }));
   };
 

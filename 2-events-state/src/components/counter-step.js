@@ -1,20 +1,20 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 export default class CounterStep extends Component {
   static defaultProps = {
-    step: 1
+    step: 1,
   };
 
   state = {
-    value: 1
+    value: 1,
   };
 
   handleIncrement = () => {
     this.setState(
       (prevState, props) =>
         props.changeStep(prevState.value + props.step) || {
-          value: prevState.value + props.step
-        }
+          value: prevState.value + props.step,
+        },
     );
   };
 
@@ -22,9 +22,9 @@ export default class CounterStep extends Component {
     this.setState((prevState, props) =>
       prevState.value > 1
         ? props.changeStep(prevState.value - props.step) || {
-            value: prevState.value - props.step
+            value: prevState.value - props.step,
           }
-        : null
+        : null,
     );
   };
 
@@ -34,8 +34,12 @@ export default class CounterStep extends Component {
     return (
       <>
         <p>step: {value}</p>
-        <button onClick={this.handleDecrement}>-1</button>
-        <button onClick={this.handleIncrement}>+1</button>
+        <button type="button" onClick={this.handleDecrement}>
+          -1
+        </button>
+        <button type="button" onClick={this.handleIncrement}>
+          +1
+        </button>
       </>
     );
   }

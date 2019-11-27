@@ -1,17 +1,17 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 export default class Counter extends Component {
   static defaultProps = {
-    initialValue: 0
+    initialValue: 0,
   };
 
   state = {
-    value: this.props.initialValue
+    value: this.props.initialValue,
   };
 
   handleIncrement = () => {
     this.setState((prevState, props) => ({
-      value: prevState.value + props.step
+      value: prevState.value + props.step,
     }));
   };
 
@@ -19,9 +19,9 @@ export default class Counter extends Component {
     this.setState((prevState, props) =>
       prevState.value > 0
         ? {
-            value: prevState.value - props.step
+            value: prevState.value - props.step,
           }
-        : null
+        : null,
     );
   };
 
@@ -31,9 +31,13 @@ export default class Counter extends Component {
 
     return (
       <div>
-        <button onClick={this.handleDecrement}>-{step}</button>
+        <button type="button" onClick={this.handleDecrement}>
+          -{step}
+        </button>
         <span>{value}</span>
-        <button onClick={this.handleIncrement}>+{step}</button>
+        <button type="button" onClick={this.handleIncrement}>
+          +{step}
+        </button>
       </div>
     );
   }

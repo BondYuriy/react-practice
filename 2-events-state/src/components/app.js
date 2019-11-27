@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import Toggle from "./toggle";
-import Counter from "./counter";
-import CounterStep from "./counter-step";
+import React, { Component } from 'react';
+import Toggle from './toggle';
+import Counter from './counter';
+import CounterStep from './counter-step';
 
 export default class App extends Component {
   state = {
-    step: 1
+    step: 1,
   };
 
   changeStep = newStep => {

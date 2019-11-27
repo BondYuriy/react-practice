@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Collection = ({ notes, deleteNote }) => (
   <ul className="collection-list">
@@ -6,6 +6,7 @@ const Collection = ({ notes, deleteNote }) => (
       <li className="collection-item" key={note.id}>
         <span>{note.text} </span>
         <button
+          type="button"
           onClick={() => {
             deleteNote(note.id);
           }}

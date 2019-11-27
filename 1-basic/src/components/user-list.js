@@ -1,5 +1,5 @@
-import React from "react";
-import UserCard from "./user-card";
+import React from 'react';
+import UserCard from './user-card';
 
 const UserList = ({ users }) => (
   <ul>
