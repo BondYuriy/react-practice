@@ -1,0 +1,10 @@
+{
+  "title": "React.js",
+  "text": "A JavaScript library for building user interfaces.",
+  "linkLabel": "Read more",
+  "features": [
+    "Declarative approach",
+    "Component-Based",
+    "Learn Once, Write Anywhere"
+  ]
+}
